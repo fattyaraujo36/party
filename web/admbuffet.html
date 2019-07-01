@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+  <link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+  <title>Administrador Buffet</title>
+</head>
+<body onload="readTask2();">
+   <nav class="navbar navbar-expand-lg navInicio ">
+    <div class ="container">
+      
+      <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav mr-auto">
+         
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admLocais.html"> Locais</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admbuffet.html"> Buffet</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admcerimonialista.html"> Cerimonialista</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "serviçosSolicitados.html"> Serviços solicitados</a>
+          </li>
+        </ul> <ul class="navbar-nav ml-auto ulCor">
+
+           <li class = "nav-item "> 
+            <button class = "nav-link  ulCor" data-toggle="modal" data-target="#modalExemplo3"  id="nav" >  <i class="fas fa-sign-out-alt fa-2x"></i></button>    
+            
+          </li> 
+        </ul>
+
+   
+
+      </div>
+    </div>
+  </nav>
+  </main>
+
+  <div class="modal fade" id="modalExemplo3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header navInicio">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body navInicio">
+          <h5 class="modal-title navInicio "id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+
+        </div>
+        <div class="modal-footer navInicio">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <a href="home.html"class="btn btn-primary" >Confirmar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+       
+      <h2 class="text-center colo mt-4 mb-4">Adicionar ao Buffet</h2>
+<form id="formBuffet">    
+ <div class="row " >
+    
+      <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+     <label  for="evento"  class="lab ml-3 ">Tipo </label>
+                  <select class="form-control inp" id="tipo2">
+                          <option disabled selected>Selecione uma opção...</option>
+                          <option value="doce">Doce</option>
+                          <option value="salgado">Salgado</option>
+                          <option value="outros">Outros</option>
+                  </select>
+    </div>
+    <div class="col-md-4 col-mb-2 mt-3 ">
+      
+  
+    <label for="nome" class="lab ml-3 " > Foto  </label>
+    <input type="file" class="form-control inp" id="file2" />
+  </div>  </div><div class="row " >
+    <div class="col-md-3 col-mb-2 mt-3 ml-5">
+      <label for="Cantor" class="lab ml-3 ">Nome</label>
+ <input  type="text" class="form-control inp" id="nomeofc2"> </div>
+  
+
+ 
+    <div class="form-group col-md-2 ml-3 mb-3 mt-3">
+   <label for="data" class="lab ml-3 "> Quantidade</label>
+        <input  type="text" class="form-control inp"name="qtd" id="qtd"> </div>
+          
+           <div class="form-group col-md-2 ml-3 mb-3 mt-3">
+        <label  for="horario" class="lab ml-3 ">Preço</label>
+        <input  type="text" class="form-control inp" id="preco2"> </div>
+        </div>
+ </div>
+</div>
+
+    
+  </div>
+
+
+   <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+  <input type="submit" class="btn btn-outline-secondary"  value="Salvar" />
+ <button class="btn btn-outline-secondary" type="reset" > Cancelar </button>
+ 
+   
+        </form>
+      </div>
+
+            
+<h2 class="text-center colo mt-4 mb-4">Adicionados ao Buffet </h2>
+      <div id="buffet"></div> 
+      <!--
+<h2 class="text-center colo mt-4 mb-4">Doces </h2>
+ 
+      <div class="col-sm-5 ca ml-3">
+    <div class="card text-center ca">
+      <img src="img/casamento.jpg" class="imgcard mx-auto md-block mt-3" alt="...">
+      <div class="card-body">
+        <div class="align-center">
+
+        <p class="card-text ct text-center">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Excluir</a>
+    <a href="#" class="btn btn-primary">Editar</a>
+  </div>
+</div> 
+</div>
+</div>
+
+<h2 class="text-center colo mt-4 mb-4">Salgados </h2>
+         
+<h2 class="text-center colo mt-4 mb-4">Outros </h2> -->
+      
+<script src="js/admBuffet.js"> </script>
+           
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script> 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+authDomain: "partylifeofc.firebaseapp.com",
+databaseURL: "https://partylifeofc.firebaseio.com",
+projectId: "partylifeofc",
+storageBucket: "partylifeofc.appspot.com",
+messagingSenderId: "204959805603",
+appId: "1:204959805603:web:5a7945f7e92fbbdb"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+  <link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+    <link rel="stylesheet" href= "node_modules/bootstrap/compiler/style2.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+    authDomain: "partylifeofc.firebaseapp.com",
+    databaseURL: "https://partylifeofc.firebaseio.com",
+    projectId: "partylifeofc",
+   
+  };
+  firebase.initializeApp(config);
+
+  const auth=firebase.auth();
+  const db=firebase.firestore();
+
+  db.setings({timestampsInSnapshots:true});
+</script>
+
+  
+  <title>Página Inicial</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg  navInicio" >
+    <div class ="container">
+        <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav  ">
+         <p  class="align-left">
+          <li class="align-left">
+          <a class="icone" href="loginofc.html"><i class="fas fa-sign-in-alt fa-2x"></i></a> </li>
+          </p>
+          
+          </p>
+      </div>
+    </div>
+  </nav>
+  </main>
+            </nav>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+  
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="img/preto.png" height="800px" alt="Primeiro Slide">
+        <div class="carousel-caption d-none d-md-block">
+           <img class="logo mt-5" src="img/logo.png"> <p>
+             <div class="row mt-5">
+       <div class="  mx-auto">
+
+      <i class="fas fa-birthday-cake fa-4x ml-5  mb-3 mt-3"> </i>  
+    
+    
+     <i class=" fas fa-map-marker-alt fa-4x ml-5  mb-3 mt-3"></i>   
+     
+      <i class="fas fa-money-check-alt fa-4x ml-5  mb-3 mt-3"></i>  
+
+      <i class="fas fa-user-tie fa-4x ml-5  mb-3 mt-3"></i>  
+  
+      <i class="fas fa-music fa-4x ml-5  mb-3 mt-3"></i>  
+      
+      <i class="far fa-address-book fa-4x ml-5 mb-3 mt-3 mr-5"></i> 
+      
+</div> </div> 
+           <a href="loginofc.html" class="btn btn-outline-secondary bot ">Entrar</a>
+           <a href="cadastroofc.html"class="btn btn-outline-secondary bot">Criar Conta</a>
+               </p>
+
+    </div>
+    </div>
+  </div>
+  
+  <!--
+  <div class="modal" id ="modalExemplo"tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modalBlack">
+        <h4> Insira seus dados para acessar o PartyLife</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modalLogin">
+        <form id="formAutenticacao4">
+      <div class= "form-group col-md-6 mx-auto">
+        <label for ="emailInput4" class="ent" >Email</label>
+        <input type="email" class="form-control" name="emailInputt" id="emailInput4" >
+      </div>
+      <div class="form-group col-md-6 mx-auto">
+        <label for="passwordInput4" class="ent" > Senha</label>
+        <input type="password" class="form-control" name="passwordInputt" id="passwordInput4">
+      </div>
+      <button type="submit" class="btn btn-outline-secondary" > Entrar </button>
+           <a href="cadastroofc.html"class="btn btn-outline-secondary ">Criar Conta</a>
+           </form>
+   
+      </div>
+      <div class="modal-footer modalBlack">
+      
+      </div>  
+
+    </div>
+  </div>
+</div> 
+   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+    authDomain: "partylifeofc.firebaseapp.com",
+    databaseURL: "https://partylifeofc.firebaseio.com",
+    projectId: "partylifeofc",
+   
+  };
+  firebase.initializeApp(config);
+
+  const auth=firebase.auth();
+ 
+</script>
+	
+	
+
+<script src="autenticacao.js"> </script>
+ -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+   
+  
+</body>
+  </html>

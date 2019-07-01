@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+  <link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  
+
+  <title> Administrador Local</title>
+</head>
+<body onload="readTaskL();">
+   <nav class="navbar navbar-expand-lg navInicio" >
+    <div class ="container">
+      
+      <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav mr-auto">
+         
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admLocais.html"> Locais</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admbuffet.html"> Buffet</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "admcerimonialista.html"> Cerimonialista</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "serviçosSolicitados.html"> Serviços solicitados</a>
+          </li>
+        </ul>
+         <ul class="navbar-nav ml-auto ulCor">
+
+           <li class = "nav-item "> 
+            <a class = "nav-link  ulCor"   id="nav" href = "home.html">  <i class="fas fa-sign-out-alt fa-2x"></i></a>    
+            
+          </li> 
+        </ul>
+      </div>
+  </nav>
+      
+       
+      <h2 class="text-center colo mt-4 mb-4">Adicionar Local</h2>
+     
+    
+      <div class="row"  >
+      
+              
+              <div class="form-group col-md-3 ml-5 mb-3 mt-3">
+
+          <form id="formLocais">
+      <label for="nome" class="lab ml-3 " >Nome </label>
+      <input type="text" class="form-control inp" id="nomeL">
+      </div>
+
+      <div class="col-md-3 col-mb-2 mt-3 ">
+      
+  
+        <label for="nome" class="lab ml-3 " > Bairro  </label>
+        <input type="text" class="form-control inp" id="bairroL" >
+      </div>
+
+      <div class="col-md-3 col-mb-2 mt-3 ">
+      
+  
+        <label for="nome" class="lab ml-3 " > Rua  </label>
+        <input type="text" class="form-control inp" id="ruaL" >
+      </div>
+      <div class="col-md-2 col-mb-2 mt-3 ">
+      
+  
+        <label for="nome" class="lab ml-3 " > Número  </label>
+        <input type="text" class="form-control inp" id="numL" >
+      </div>
+    </div>
+    
+   <div class="row">
+     <div class="col-md-3 ml-5  col-mb-2 mt-3">
+     <label for="email" class="lab ml-3 ">Email</label>
+      <input type="Email" class="form-control inp" id="emailL">
+        </div> 
+        <div class="col-md-4 col-mb-2 mt-3 ">
+      
+  
+          <label for="nome" class="lab ml-3 " > Foto  </label>
+          <input type="file" class="form-control inp" id="file" />
+         
+        </div> <div class="col-md-3 ml-3  col-mb-2 mt-3">
+          <label for="email" class="lab ml-3 ">Contato</label>
+           <input type="text" class="form-control inp" id="contatoL">
+             </div> </div>
+          <div class="col-md-3 col-mb-2 mt-3 ">
+      
+      <div class="row"  >
+        <div class="ml-5 mb-3">
+        <label for="preco" class="lab ml-3 ">Preço</label>
+         <input type="text" class="form-control inp" id="precoL">
+        </div>
+        
+   </div> 
+      
+</div>
+        <!--<label for="upload">Upload </label>
+         <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+         <input type="file" />-->
+    </div>
+    <div class="row"  >
+    <div class="form-group  ml-5 col-md-4 ">
+    <label for="form-group" class="lab ml-3">Descrição</label>
+    <textarea class="form-control text" id="descricaoL" rows="3"></textarea>
+  </div>
+</div>
+
+
+   <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+  <input type="submit" class="btn btn-outline-secondary" value="Salvar" >  />
+ <button class="btn btn-outline-secondary" type="reset" id="cancelarLocais" > Cancelar </button>
+ 
+   
+        </form>
+    </div>
+
+
+
+<h2 class="text-center colo mt-4 mb-4">Locais adicionados</h2> <!--
+<p class="ml-5" style="background-color: black; color: white">    Buscar Local  <form class="form-inline"> 
+
+    <input class= "form-control ml-4 mr-2" type="search" id = "buscarLocais"placeholder="Buscar...">
+    <button class="btn btn-dark" onclick="insert();" type="button"> Ok</button>
+  </form></p>    
+    
+
+
+<p> Nome: <strong id="nameLocaiss"> </strong> </p>
+<p> Bairro: <strong id="bairroLocaiss"> </strong></p>
+<p> Rua: <strong id="ruaLocaiss"> </strong></p>
+<p> Num: <strong id="numLocaiss"> </strong></p>
+<p> Email: <strong id="emailLocaiss"> </strong></p>
+<p> Preço: <strong id="precoLocaiss"> </strong></p>
+<p> Descrição: <strong id="descricaoLocaiss"> </strong></p> -->
+
+
+<div  id = "locais"> </div>
+   
+</div>
+<script src="js/admLocais.js"> </script>
+           
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script> 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+    authDomain: "partylifeofc.firebaseapp.com",
+    databaseURL: "https://partylifeofc.firebaseio.com",
+    projectId: "partylifeofc",
+    storageBucket: "partylifeofc.appspot.com",
+    messagingSenderId: "204959805603",
+    appId: "1:204959805603:web:5a7945f7e92fbbdb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script> 
+
+         
+      
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype	html>
+<html>
+<head>
+	<meta	charset="UTF-8">
+	<meta	name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+	<link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+  <link rel="stylesheet" href= "node_modules/bootstrap/compiler/lista.css">
+
+<!-- <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"> </script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <title>Lista de Convidados</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #963398;">
+    <div class ="container">
+      
+      <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> 
+            <a class = "nav-link" href = "index.html">Início</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "criefestas.html"> Crie suas festas</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "orcamento.html">Orçamento</a>    
+          </li>
+          
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "sobre.html">Sobre</a>    
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class = "nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+              Serviços 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navDrop">
+              <a class="dropdown-item" href="cerimonialista.html"> Cerimonialista</a>
+              <a class="dropdown-item" href="buffet.html"> Buffet</a>
+              <a class="dropdown-item" href="locais.html"> Local</a>
+
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline">
+          <input class= "form-control ml-4 mr-2" type="search" placeholder="Buscar...">
+          <button class="btn btn-dark" type="submit"> Ok</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <h2 class="text-center colo mt-4 mb-4">Lista de Convidados</h2>
+  <div class = "content">
+    
+<form  id="formLista">
+      <div class="row"  >
+     <div class="form-group col-md-3 ml-5 mb-3 mt-3">
+      <label for="nome" class="lab ml-3 ">Nome </label>
+      <input type="text" class="form-control inp"  id="nome">
+    </div>
+    <div class="col-md-3 col-mb-3 mt-3">
+      <label for="email" class="lab ml-3">Email</label>
+      <input type="Email" class="form-control inp" id="email">
+    </div>
+    
+    
+    <div class="col-md-2 col-mb-3 mt-5">
+   <button class="btn btn-outline-secondary form-control"> Adicionar a Lista </button>
+   </div>
+   </div>
+        </form>
+      </div>
+    </div>
+        <table class="table table-hover tb" >
+          <thead >
+        
+            <tr>
+              <th id="cor" scope="col">#</th>
+              <th id ="cor"scope="col">Nome</th>
+              <th id = "cor" scope="col">Email</th>
+              <th id = "cor" scope="col">Opções</th>
+              <th id = "cor" scope="col">Enviar Convite</th>
+              
+            </tr>
+          </thead>
+          <tbody id = "tabela" class = "ulLista">
+            
+            
+  
+          </tbody>
+        </table>
+        
+</div>
+ 
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+    authDomain: "partylifeofc.firebaseapp.com",
+    databaseURL: "https://partylifeofc.firebaseio.com",
+    projectId: "partylifeofc",
+    storageBucket: "partylifeofc.appspot.com",
+    messagingSenderId: "204959805603"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampInSnapshots: true });
+
+</script>
+ <script src="lista.js"> </script>         
+</body>
+
+
+
+
+</html>

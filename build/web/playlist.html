@@ -1,0 +1,127 @@
+<!doctype	html>
+<html>
+<head>
+	<meta	charset="UTF-8">
+	<meta	name="viewport" content="width=device-width">
+    
+	<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+	<link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+    
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script> 
+    
+	<title >Playlist</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navInicio">
+    <div class ="container">
+      
+      <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> 
+            <a class = "nav-link" href = "index.html">Início</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "criefestas.html"> Crie suas festas</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "orcamento.html">Orçamento</a>    
+          </li>
+          
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "sobre.html">Sobre</a>    
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class = "nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+              Serviços 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navDrop">
+              <a class="dropdown-item" href="cerimonialista.html"> Cerimonialista</a>
+              <a class="dropdown-item" href="produtos.html"> Buffet</a>
+              <a class="dropdown-item" href="locais.html"> Local</a>
+
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline">
+          <input class= "form-control ml-4 mr-2" type="search" placeholder="Buscar...">
+          <button class="btn btn-dark" type="submit"> Ok</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <h2 class="text-center colo mt-4 mb-4">Playlist</h2> 
+            
+      <div class="row">
+    <div class="col-md-3 mb- mt-3 ml-5">
+      <label for="nome" class="lab ml-3 ">Nome </label>
+      <input type="text" class="form-control inp"  id="nome">
+    </div>
+    <div class="col-md-3 col-mb-3 mt-3">
+      <label for="cantorBanda" class="lab ml-3 ">Cantor/Banda</label>
+      <input type="text" class="form-control inp" id="cantorBanda">
+    </div>
+    <div class="col-md-3 col-mb-3 mt-3">
+    <label for="genero" class="lab ml-3 ">Gênero</label>
+      <input type="text" class="form-control inp" id="genero">
+    </div>
+  <div class="col-md-2 col-mb-3 mt-5">
+     <button class="btn btn-outline-secondary form-control"> Adicionar a Lista </button>
+   </div>
+    </div> 
+        </form>
+         </div>
+    
+</div>
+<table class="table table-hover tb mt-3" >
+          <thead >
+        
+            <tr>
+              <th id="cor" scope="col">#</th>
+              <th id ="cor"scope="col">Nome</th>
+              <th id = "cor" scope="col">Email</th>
+              <th id = "cor" scope="col">Opções</th>
+              <th id = "cor" scope="col">Enviar Convite</th>
+              
+            </tr>
+          </thead>
+          <tbody id = "tabela" class = "ulLista">
+            
+            
+  
+          </tbody>
+        </table>
+
+         
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAehTliXdd9GWsuXVsKfk6TQEhCHfAqSMY",
+    authDomain: "partylifeofc.firebaseapp.com",
+    databaseURL: "https://partylifeofc.firebaseio.com",
+    projectId: "partylifeofc",
+    storageBucket: "partylifeofc.appspot.com",
+    messagingSenderId: "204959805603"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampInSnapshots: true });
+
+</script>
+ <script src="playlist.js"> </script>     
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body> 
+</html>

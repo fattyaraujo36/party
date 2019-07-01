@@ -1,0 +1,130 @@
+<!doctype	html>
+<html>
+<head>
+	<meta	charset="UTF-8">
+	<meta	name="viewport" content="width=device-width">
+    
+	<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+	<link rel="stylesheet" href= "node_modules/bootstrap/compiler/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
+     
+    
+	<title >Criar Festa</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #963398;">
+    <div class ="container">
+      
+      <button type = "button"class= "navbar-toggler" data-toggle = "collapse" data-target="#navbarSite" >
+        <span class= "navbar-toggler-icon"> </span>   
+      </button>
+      <div class="collapse navbar-collapse" id ="navbarSite">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> 
+            <a class = "nav-link" href = "index.html">Início</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "criefestas.html"> Crie suas festas</a>
+          </li>
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "orcamento.html">Orçamento</a>    
+          </li>
+          
+          <li class = "nav-item"> 
+            <a class = "nav-link" href = "sobre.html">Sobre</a>    
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class = "nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+              Serviços 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navDrop">
+              <a class="dropdown-item" href="cerimonialista.html"> Cerimonialista</a>
+              <a class="dropdown-item" href="buffet.html"> Buffet</a>
+              <a class="dropdown-item" href="locais.html"> Local</a>
+
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline">
+          <input class= "form-control ml-4 mr-2" type="search" placeholder="Buscar...">
+          <button class="btn btn-dark" type="submit"> Ok</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <h2 class="text-center colo mt-4 mb-4">Adicionar Evento</h2>
+  
+   <form > <div class=" container4">
+  <div class="row " >
+    <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+      
+     <label   for="evento" class="lab ml-3 " >Tipo do evento</label> 
+                  <select id="evento" class="form-control inp" id="evento">
+                          <option class= "inp"disabled selected>Selecione uma opção...</option>
+                          <option value="aniversario">Aniversário</option>
+                          <option value="casamento">Casamento</option>
+                          <option value="confraternizacao">Confraternização</option>
+                  </select>
+    </div>
+    <div class="col-md-2 col-mb-2 mt-3 ">
+      
+      <label for="Cantor" class="lab ml-3 ">Data</label> 
+ <input  type="date" class="form-control inp"name="validade"> </div>
+  
+    <div class="col-md-2 col-mb-2 mt-3">
+  <label for="data" class="lab ml-3 "> Data Alternativa</label> 
+        <input  type="date" class="form-control inp"name="validade"> </div>
+          
+           <div class="col-md-2 col-mb-2 mt-3">
+        <label  for="horario" class="lab ml-3 ">Horário</label> 
+        <input  type="time" class="form-control inp"> </div>
+        </div>
+
+ 
+    
+
+  
+<div class="form-group  ml-5 ">
+    <label for="form-group" class="lab ml-3">Descrição</label>
+    <textarea class="form-control text" id="exampleFormControlTextarea" rows="3"></textarea>
+  </div>
+  <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+  <button class="btn btn-outline-secondary" type="submit" > Salvar </button>
+ <button class="btn btn-outline-secondary" type="submit" > Cancelar </button>
+ <div class="form-group col-md-4 ml-5 mb-3 mt-3">
+</form>      
+</div>
+
+</div>
+
+
+</div>
+   <h2 class="text-center colo mt-4 mb-4">Seus Eventos</h2>
+  <div class="col-sm-5 ca">
+    <div class="card text-center ca">
+      <i class="far fa-address-book fa-4x icone2"></i>
+      <div class="card-body">
+        <div class="align-center">
+        <p class="card-text ct text-center">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Excluir</a>
+    <a href="#" class="btn btn-primary">Editar</a>
+  </div>
+</div> 
+</div>
+</div>
+
+         
+  
+    
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body> 
+</html>
